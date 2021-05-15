@@ -30,7 +30,7 @@ def index():
     if query is None:
         query = ''
     # return some documents 
-    documents = retrieve2(query)
+    documents = retrieve(query)
     # тут уже определяет некоторое ранжирование (сортируем)
     # doc - some feature (and returned all data)
     documents = sorted(documents, key=lambda doc: -score(query, doc))
